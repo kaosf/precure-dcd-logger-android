@@ -1,4 +1,4 @@
-package net.kaosfield.app;
+package net.kaosfield.precuredcdlogger;
 
 import android.os.Bundle;
 import android.app.Activity;
