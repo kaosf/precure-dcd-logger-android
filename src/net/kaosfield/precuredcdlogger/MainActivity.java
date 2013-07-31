@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.KeyEvent;
 import android.view.Menu;
+import android.content.Context;
 import android.webkit.WebView;
 import android.webkit.WebChromeClient;
 
@@ -19,6 +20,7 @@ public class MainActivity extends Activity {
     wv = (WebView) findViewById(R.id.webview);
     wv.getSettings().setJavaScriptEnabled(true);
     wv.getSettings().setDomStorageEnabled(true);
+    wv.getSettings().setDatabasePath(this.getApplicationContext().getDir("localstorage", Context.MODE_PRIVATE).getPath());
     wv.setWebChromeClient(new WebChromeClient());
     wv.loadUrl("file:///android_asset/index.html");
   }
